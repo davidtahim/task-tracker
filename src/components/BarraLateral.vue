@@ -4,9 +4,10 @@
       <img src="/assets/logo.png" alt="logo task tracker">  Task Tracker
     </h1>
   <ul>
-    <li><FontAwesomeIcon :icon="faUser" /> <a href="/"> Perfil</a></li>
-    <li><FontAwesomeIcon :icon="faGears" /> <a href="/"> Configurações</a></li>
-    <li><FontAwesomeIcon :icon="faListCheck" /><a href="/"> Tarefas</a></li>
+    <li><FontAwesomeIcon :icon="faHouse" size="2x" /> <a href="/"> Início</a></li>
+    <li><FontAwesomeIcon :icon="faUser" size="2x" /> <a href="/"> Perfil</a></li>
+    <li><FontAwesomeIcon :icon="faGears" size="2x" /> <a href="/"> Configurações</a></li>
+    <li><FontAwesomeIcon :icon="faListCheck" size="2x" /><a href="/"> Tarefas</a></li>
     
   </ul> 
 </header>
@@ -15,7 +16,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faUser, faGears, faListCheck } from '@fortawesome/free-solid-svg-icons';
+import { faHouse,faUser, faGears, faListCheck } from '@fortawesome/free-solid-svg-icons';
 
 export default defineComponent({
   name: 'BarraLateral',
@@ -24,6 +25,7 @@ export default defineComponent({
   },
   setup() {
     return {
+      faHouse,
       faUser,
       faGears,
       faListCheck

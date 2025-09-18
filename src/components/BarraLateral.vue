@@ -1,7 +1,7 @@
 <template>
 <header>
     <h1>
-      <img src="/assets/logow.png" alt="logo task tracker">  Task Tracker
+      <a href="/"><img src="/assets/logow.png" alt="logo task tracker"></a>
     </h1>
   <ul>
     <li><FontAwesomeIcon :icon="faHouse" size="2x" /> <a href="/"> Início</a></li>

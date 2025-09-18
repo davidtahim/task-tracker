@@ -111,10 +111,7 @@ ul{
   flex-wrap:wrap;
   float: left;
 }
-li {
-    font-size: 1em;
-    padding-top: 10px;
-}
+
 a {
   text-decoration: none;
 	font: inherit;

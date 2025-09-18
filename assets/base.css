@@ -111,6 +111,9 @@ ul{
   flex-wrap:wrap;
   float: left;
 }
+ul li{
+  margin-bottom:1rem;
+}
 
 a {
   text-decoration: none;
@@ -124,4 +127,5 @@ header h1 img{
   margin-right: .5rem;
   float: left;
   margin-top: -80px;
+
 }

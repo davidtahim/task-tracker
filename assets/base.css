@@ -102,3 +102,26 @@ hr{
   text-align:center;
   padding:1rem;
 }
+
+ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+  gap:.5rem;
+  flex-wrap:wrap;
+  float: left;
+}
+
+a {
+  text-decoration: none;
+	font: inherit;
+  color: inherit;
+}
+
+header h1 img{
+  display: block;
+  width: 250px;
+  margin-right: .5rem;
+  float: left;
+  margin-top: -80px;
+}

@@ -1,18 +1,35 @@
 <template>
 <header>
     <h1>
-        Task Tracker
+      <img src="/assets/logo.png" alt="logo task tracker">  Task Tracker
     </h1>
+  <ul>
+    <li><FontAwesomeIcon :icon="faUser" /> <a href="/"> Perfil</a></li>
+    <li><FontAwesomeIcon :icon="faGears" /> <a href="/"> Configurações</a></li>
+    <li><FontAwesomeIcon :icon="faListCheck" /><a href="/"> Tarefas</a></li>
+    
+  </ul> 
 </header>
 </template>
 
-<script  lang="ts">
+<script lang="ts">
 import { defineComponent } from 'vue';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { faUser, faGears, faListCheck } from '@fortawesome/free-solid-svg-icons';
 
 export default defineComponent({
   name: 'BarraLateral',
+  components: {
+    FontAwesomeIcon
+  },
+  setup() {
+    return {
+      faUser,
+      faGears,
+      faListCheck
+    };
+  }
 });
-
 </script>
 
 

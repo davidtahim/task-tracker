@@ -65,7 +65,7 @@ export default defineComponent({
   },
   computed: {
     // Adicione propriedades computadas aqui, se necessário
-    tempoDecorrido() : string {
+    tempoDecorrido()  {
       return new Date(this.tempoEmSegundos * 1000).toISOString().substr(11, 8);  
       
     }

@@ -1,16 +1,21 @@
 <template>
-<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+<div class="d-flex">
+    <!-- Barra Lateral -->
+  <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
       <BarraLateral />
-
-    </a>
-    <hr>
-    </div>
-     <Formulario />
+    
+      <hr>
+      </div>
+    <!-- Formulário --> 
+     <div class="flex-grow-1 p-3">
+      <Formulario />
+     </div>
+   
+</div>   
        
 </template>
 
-<script setup lang="ts">
+<script setup lang="s">
 import BarraLateral from './components/BarraLateral.vue';
 import Formulario from './components/Formulario.vue';
 </script>

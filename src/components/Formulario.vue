@@ -57,14 +57,15 @@ export default defineComponent({
   name: 'Formulario',
   data() {
     return {
-      tempoEmSegundos: 0,  
+      tempoEmSegundos: 0,
+      cronometro: 0,  
       text: '',
       reminder: false
     }
   },
   computed: {
     // Adicione propriedades computadas aqui, se necessário
-    tempoDecorrido() {
+    tempoDecorrido() : string {
       return new Date(this.tempoEmSegundos * 1000).toISOString().substr(11, 8);  
       
     }
@@ -72,15 +73,15 @@ export default defineComponent({
   methods: {
     iniciar() {
       // Lógica de inicialização, se necessário
-      setInterval(() => {
+     this.cronometro = setInterval(() => {
         this.tempoEmSegundos+=1;
       }, 1000);
-      console.log('Iniciar tarefa');
+      
       
     },
     finalizar(){
         // Lógica de finalização, se necessário
-        console.log('Finalizar tarefa');
+        clearInterval(this.cronometro);
     },
     onSubmit() {
       // Adicione aqui a lógica para lidar com o envio do formulário

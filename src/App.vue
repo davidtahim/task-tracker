@@ -15,7 +15,7 @@
        
 </template>
 
-<script setup lang="s">
+<script setup lang="ts">
 import BarraLateral from './components/BarraLateral.vue';
 import Formulario from './components/Formulario.vue';
 </script>

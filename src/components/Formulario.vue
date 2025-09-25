@@ -27,15 +27,19 @@
             </form>
             <div class="col-md-4">
                 <section>
-                    <strong>00:00:00</strong>
+                    <strong>
+                        {{ //tempoEmSegundos 
+                         tempoDecorrido 
+                        }}
+                    </strong>
                 </section>
-            <button class="button">
+            <button class="button" @click="iniciar">
             <span class="icon">
                 <i class="fas fa-play"></i>
             </span>
             <span>play</span>
         </button>
-        <button class="button">
+        <button class="button" @click="finalizar">
             <span class="icon">
                 <i class="fas fa-stop"></i>
             </span>
@@ -53,11 +57,31 @@ export default defineComponent({
   name: 'Formulario',
   data() {
     return {
+      tempoEmSegundos: 0,  
       text: '',
       reminder: false
     }
   },
+  computed: {
+    // Adicione propriedades computadas aqui, se necessário
+    tempoDecorrido() {
+      return new Date(this.tempoEmSegundos * 1000).toISOString().substr(11, 8);  
+      
+    }
+  },
   methods: {
+    iniciar() {
+      // Lógica de inicialização, se necessário
+      setInterval(() => {
+        this.tempoEmSegundos+=1;
+      }, 1000);
+      console.log('Iniciar tarefa');
+      
+    },
+    finalizar(){
+        // Lógica de finalização, se necessário
+        console.log('Finalizar tarefa');
+    },
     onSubmit() {
       // Adicione aqui a lógica para lidar com o envio do formulário
       // Por exemplo, emitir um evento ou atualizar um array de tarefas
